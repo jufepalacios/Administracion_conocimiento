@@ -31,11 +31,12 @@ Hay diferentes maneras de que la información del cliente entre al CDP:
 
 """)
 
-container.write(' De acuerdo al texto anterior responda las siguientes preguntas ')
+container.write(' De acuerdo al texto anterior responda las siguientes preguntas')
 
 with container.form("form_1"):
-   st.markdown("### Pregunta 1")
-   option_1 = st.radio(' Si una persona se registró dentro de Tada y agregó items al carro de compras. ¿Qué tipo de record es? ',
+   st.markdown("### Caso 1")
+   option_1 = st.radio("""Tu jefe te pide que clasifiques los registros de consumidores dentro del CDP y tienes un usuario que 
+                        se registró dentro de Tada y agregó items al carro de compras. ¿Como qué tipo de record lo clasificarías?""",
              ('a. Bronze',
               'b. Golden',
               'c. Diamond',
@@ -49,8 +50,9 @@ with container.form("form_1"):
             st.error('Respuesta incorrecta, vuelva a intentarlo')
 
 with container.form("form_2"):
-   st.markdown("### Pregunta 2")
-   option_2 = st.radio(' Budweiser  lanza una campaña de Leds Ads en FB, y a la semana  de cerrar la campaña no registra ningún récord dentro del CDP. ¿A qué se debe?',
+   st.markdown("### Caso 2")
+   option_2 = st.radio("""Estás a cargo de supervisar la integración de datos del CDP. Durante una reunión, uno de tus colegas plantea el siguiente caso:
+Budweiser acaba de lanzar una campaña de Leads Ads en Facebook, pero después de cerrar la campaña, no se registra ningún registro dentro del CDP. ¿Qué podría estar causando este problema?""",
              ('a. Los records de FB no pueden entrar al CDP',
               'b. La carga de estos records se deben realizar manualmente y no se ha realizado.',
               'c. Es necesario esperar un mes para que los records aparezcan.',
